@@ -17,7 +17,6 @@ function searchMeal(e) {
 
   // check for empty
   if (term.trim()) {
-    console.log(term);
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
       .then((res) => res.json())
       .then((data) => {
@@ -54,13 +53,12 @@ function searchMeal(e) {
 submit.addEventListener("submit", searchMeal);
 
 mealsEl.addEventListener("click", (e) => {
-  const mealInfo = e.path.find((item) => {
-    if (item.classList) {
-      return item.classList.contains("meal-info");
-    } else {
-      return false;
-    }
-  });
+  // Traverse the DOM to find the parent element with the class "meal-info"
+  let mealInfo = e.target;
+  while (mealInfo && !mealInfo.classList.contains("meal-info")) {
+    mealInfo = mealInfo.parentElement;
+  }
+
   if (mealInfo) {
     const mealID = mealInfo.getAttribute("data-mealid");
     console.log(mealID);
