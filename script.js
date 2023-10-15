@@ -27,8 +27,9 @@ function searchMeal(e) {
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>There are no search result. Try again!</p>`;
         } else {
-          mealsEl.innerHTML = data.meals.map(
-              meal => `
+          mealsEl.innerHTML = data.meals
+            .map(
+              (meal) => `
             <div class="meal">
           <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
           <div class="meal-info" data-mealID="${meal.idMeal}">
@@ -36,8 +37,9 @@ function searchMeal(e) {
           </div>
         </div>
 
-            `)
-            .join('');
+            `
+            )
+            .join("");
         }
       });
 
@@ -50,3 +52,17 @@ function searchMeal(e) {
 
 // Event listener
 submit.addEventListener("submit", searchMeal);
+
+mealsEl.addEventListener("click", (e) => {
+  const mealInfo = e.path.find((item) => {
+    if (item.classList) {
+      return item.classList.contains("meal-info");
+    } else {
+      return false;
+    }
+  });
+  if (mealInfo) {
+    const mealID = mealInfo.getAttribute("data-mealid");
+    console.log(mealID);
+  }
+});

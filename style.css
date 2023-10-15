@@ -82,6 +82,23 @@ input[type="text"] {
 .meal .meal-info:hover {
   opacity: 1;
 }
+
+.single-meal {
+  margin: 30px auto;
+  width: 70%;
+}
+.single-meal img {
+  width: 300px;
+  margin: 15px;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+.single-meal-info {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 2px #e09850 dashed;
+  border-radius: 5px;
+}
 @media (max-width: 800px) {
 }
 @media (max-width: 700px) {
