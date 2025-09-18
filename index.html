@@ -25,27 +25,26 @@
     <div class="header-right">
       <button class="login">Log in</button>
       <button class="signup">Sign up</button>
-
       <span>🛒</span>
     </div>
   </header>
 
   <!-- Navbar -->
   <nav class="navbar">
-        <a href="#">🏪 Choyes Food</a>
+    <a href="#">🏪 Choyes Food</a>
     <a href="#">📦 Pick-up</a>
-        <a href="#">🚴 Delivery</a>
+    <a href="#">🚴 Delivery</a>
     <a href="#">💼 Contact</a>
   </nav>
 
   <!-- Search -->
   <div class="search-bar">
-    <input type="text" placeholder="Search for restaurants, cuisines, and dishes" />
-    <button class="search-btn">Search</button>
+    <input id="search" type="text" placeholder="Search for restaurants, cuisines, and dishes" />
+    <button id="submit" class="search-btn">Search</button>
   </div>
 
   <!-- Promo Banner -->
-  <section class="promo-banner">
+  <section id="promo-banner" class="promo-banner">
     <div class="promo-text">
       <h2>Sign up for free delivery on<br />your first order</h2>
       <button class="promo-btn">Sign up</button>
@@ -55,7 +54,16 @@
     </div>
   </section>
 
- 
+  <!-- Results -->
+  <section class="results">
+    <div id="result-heading"></div>
+    <div id="meals"></div>
+    <div id="single-meal"></div>
+    <div class="load-more-container">
+      <button id="load-more" class="load-more-btn" style="display:none;">Load More</button>
+    </div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>

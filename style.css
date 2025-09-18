@@ -50,7 +50,7 @@ body {
   align-items: center;
   padding: 12px 8%;
   border-bottom: 1px solid #eee;
-  background: #f4f3f3;
+  background: #e8e6e6;
 }
 .logo img {
   height: 55px;
@@ -182,47 +182,81 @@ body {
 
 /* Floating animation */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
 
-/* Deals Section */
-.deals {
-  padding: 30px 8%;
+/* Results */
+.results {
+  margin: 30px 8%;
 }
-.deals h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+#result-heading {
   margin-bottom: 20px;
 }
-.deal-cards {
-  display: flex;
+#meals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  overflow-x: auto;
 }
-.deal-card {
-  min-width: 200px;
+.meal {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.meal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+.meal img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.meal .p-4 {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.add-btn {
+  margin-top: 12px;
   padding: 10px;
-  text-align: center;
+  background: linear-gradient(45deg, #28a745, #218838);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
   transition: 0.3s;
 }
-.deal-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+.add-btn:hover {
+  background: linear-gradient(45deg, #218838, #1e7e34);
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3);
 }
-.deal-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 8px;
+
+/* Load More Button */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-.deal-card p {
-  font-size: 0.9rem;
-  font-weight: 500;
+.load-more-btn {
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #ff2b85, #ff5ea3);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.load-more-btn:hover {
+  background: linear-gradient(45deg, #e02677, #ff2b85);
+  box-shadow: 0 4px 12px rgba(255, 43, 133, 0.3);
+  transform: translateY(-2px);
 }
