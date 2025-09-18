@@ -63,7 +63,7 @@ function searchMeal(e) {
       } else {
         resultHeading.innerHTML = `<h3>Search results for '${term}':</h3>`;
         currentMeals = data.meals;
-        renderMeals(); // প্রথম ৬টা show করবে
+        renderMeals();
       }
     });
   search.value = "";

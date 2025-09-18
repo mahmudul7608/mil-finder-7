@@ -260,3 +260,79 @@ body {
   box-shadow: 0 4px 12px rgba(255, 43, 133, 0.3);
   transform: translateY(-2px);
 }
+
+/* Choyes Food Section styling */
+.choyes-food {
+  padding: 50px 20px;
+  text-align: center;
+  background: rgb(202, 199, 199); /* Orange-Yellow gradient like the image */
+}
+
+.choyes-food h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #333;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.food-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.food-item h3 {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.food-item .price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.food-item:hover img {
+  transform: scale(1.05);
+}
+
+.order-btn {
+  background: #ff7f50;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.order-btn:hover {
+  background: #e85b2d;
+  transform: scale(1.05);
+}
