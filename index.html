@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>meal Finder</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Meal Finder</h1>
-      <div class="flex">
-        <form class="flex" id="submit">
-          <input
-            type="text"
-            id="search"
-            placeholder="search for the meals or keywords"
-          />
-          <button class="search-btn" id="submit" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-        <button class="random" id="random">
-          <i class="fa-solid fa-shuffle"></i>
-        </button>
-      </div>
-      <div id="result-heading"></div>
-      <div id="meals" class="meals"></div>
-      <div id="single-meal"></div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Delivery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <button>Search your favorite food</button>
+    <button>We are delivering your favorite food</button>
+    <span class="close-btn">&times;</span>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="delivery.png" alt=" logo">
+    </div>
+    <div class="location">
+      <span>📍 New address Bogura, Dhaka, Bangladesh</span>
+    </div>
+    <div class="header-right">
+      <button class="login">Log in</button>
+      <button class="signup">Sign up</button>
+
+      <span>🛒</span>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+        <a href="#">🏪 Choyes Food</a>
+    <a href="#">📦 Pick-up</a>
+        <a href="#">🚴 Delivery</a>
+    <a href="#">💼 Contact</a>
+  </nav>
+
+  <!-- Search -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search for restaurants, cuisines, and dishes" />
+    <button class="search-btn">Search</button>
+  </div>
+
+  <!-- Promo Banner -->
+  <section class="promo-banner">
+    <div class="promo-text">
+      <h2>Sign up for free delivery on<br />your first order</h2>
+      <button class="promo-btn">Sign up</button>
+    </div>
+    <div class="promo-img">
+      <img src="delivery.png" alt="image" />
+    </div>
+  </section>
+
+ 
+  <script src="script.js"></script>
+</body>
 </html>
